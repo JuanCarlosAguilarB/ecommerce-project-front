@@ -8,19 +8,28 @@ import {
 } from "react-router-dom";
 import { Header, Footer } from "../Components/Molecules";
 
+import Login from "../Components/Pages/Login/Login";
+
 export function RoutesProject() {
   return (
-    <BrowserRouter>
-      <main>
-      <Header />
-        <Routes >
-          <Route path="/" element={<Home />} />
-          <Route path="/blog/*" element={<BlogApp />} />
-          <Route path="/users/*" element={<UserApp />} />
-        </Routes>
-      <Footer />
-      </main>
-    </BrowserRouter>
+    <div //className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+    >
+      <div //className="max-w-md w-full space-y-8"
+      >
+        <BrowserRouter>
+          <main>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/blog/*" element={<BlogApp />} />
+              <Route path="/users/*" element={<UserApp />} />
+            </Routes>
+            <Footer />
+          </main>
+        </BrowserRouter>
+      </div>
+    </div>
   );
 }
 
