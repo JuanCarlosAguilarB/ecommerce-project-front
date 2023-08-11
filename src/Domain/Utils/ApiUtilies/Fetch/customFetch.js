@@ -40,3 +40,5 @@ function customFetch(url, method = "GET", body = null, headers) {
       });
   });
 }
+
+export default customFetch;
