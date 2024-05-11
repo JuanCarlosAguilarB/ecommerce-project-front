@@ -7,7 +7,7 @@
  * @param {object} [headers] - Additional headers to include in the request.
  * @returns {Promise} - A Promise that resolves to the JSON response data if successful, or rejects with the response or error.
  */
-function customFetch(url, method = "GET", body = null, headers) {
+export function customFetch(url, method = "GET", body = null, headers) {
   // Retrieve the token from local storage
   const token = localStorage.getItem("token");
 
@@ -40,5 +40,3 @@ function customFetch(url, method = "GET", body = null, headers) {
       });
   });
 }
-
-export default customFetch;

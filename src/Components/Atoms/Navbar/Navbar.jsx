@@ -16,3 +16,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+// revisar 
+// https://www.material-tailwind.com/docs/react/navbar

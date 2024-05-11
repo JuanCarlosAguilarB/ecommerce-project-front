@@ -2,6 +2,8 @@
 // import { BACKEND_URL } from '../../../Redux/Paths';
 // import { FETCH_WHITE_LIST, FETCH_ERRORS, STATUS_CODE } from '../../../Settings/Constants/Constants';
 
+import { customFetch } from "./customFetch";
+
 const BACKEND_URL = '';
 const {FETCH_WHITE_LIST, FETCH_ERRORS, STATUS_CODE} ={};
 

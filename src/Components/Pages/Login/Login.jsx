@@ -37,11 +37,11 @@ const JitsiMeetComponent = () => {
 
   return (
     <div style={{ width: "100%", height: "100vh" }}>
-      <iframe
+      <iframe style={{ width: "100%", height: "100vh" }}
         ref={iframeRef}
         allow="camera; microphone; fullscreen; display-capture"
-        src="https://meet.litethinking.com/LongTermNotesVaryEfficiently"
-        style={{ border: "0", width: "100%", height: "100%" }}
+        src="https://meet.jit.si/ExcessHornsHookAway"
+        // src="https://meet.litethinking.com/LongTermNotesVaryEfficiently"
         allowFullScreen
         title="Jitsi Meet"
       />
@@ -60,12 +60,13 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    authenticateUser();
+    // authenticateUser(loginState);
+    console.log(loginState);  
   };
 
   return (
     <>
-      {/* <JitsiMeetComponent /> */}
+      <JitsiMeetComponent />
       <div className="min-h-full flex items-center justify-center py-40 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <Header
@@ -75,7 +76,7 @@ export default function Login() {
             linkUrl="/signup"
           />
 
-          <form className="mt-8 space-y-6">
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div className="-space-y-px">
               {fields.map((field) => (
                 <Input
